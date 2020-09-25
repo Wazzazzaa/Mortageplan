@@ -1,0 +1,14 @@
+CREATE TABLE Customers (
+customer_id INT(6) UNSIGNED AUTO_INCREMENT,
+customer VARCHAR (30),
+loan INT(32),
+interest INT(32),
+years INT(32),
+PRIMARY KEY (customer_id)
+)
+
+INSERT INTO customers (customer, loan, interest, years)
+VALUES ('Juha','1000','5','2'),
+('Karvinen','4356','1.27','6'),
+('Claes Månsson','1300.55','8.67','2'),
+('Clarencé Andersson','2000','6','4');
