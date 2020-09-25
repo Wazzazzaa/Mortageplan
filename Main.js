@@ -1,11 +1,9 @@
-const mysql = require('mysql');
-let http = require('http');
-
+const mysql = require('mysql')
 //DB connection
 const connection = mysql.createConnection({
   host     : 'localhost',
   user     : 'root',
-  password : 'perunamuussi',
+  password : '',
   database : 'mortageplan',
   port     : 3306
 });
@@ -20,6 +18,8 @@ connection.connect((err) => {
     if (err) throw err;
     let jsonresult = JSON.stringify(result);
     let obj = JSON.parse(jsonresult);
+
+    //Calculate and print out fixed monthly payment
     let arrayl = result.length;
     for (let i = 0; i < arrayl; i++) {
       let A = obj[i].customer;
